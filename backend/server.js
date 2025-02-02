@@ -5,8 +5,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const app = express();
-//const PORT = process.env.PORT || 3000;
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(helmet());
@@ -19,20 +18,20 @@ var connection = mysql.createConnection({
   database: process.env.DATABASE,
 });
 
-console.log('connection', process.env.HOST);
 
 connection.connect((err) => {
   if (err) {
     return;
   }
+  console.log('connection', process.env.HOST);
 });
 
 app.get('/', (req, res) => {
-  res.status(404);
+  res.status(200).send('Hello World!');
 });
 
 //obtener todos los equipos
-app.get('/equipos', (req, res) => {
+app.get('/api/equipos', (req, res) => {
   connection.query('SELECT * FROM phonesData', (err, results) => {
     if (err) {
       res.status(500).send('Error executing query');
@@ -43,12 +42,12 @@ app.get('/equipos', (req, res) => {
     }
 
     res.set('Cache-Control', 'max-age=300000, must-revalidate')
-    res.json(results);
+    res.status(200).json(results);
   });
 });
 
 //guadar carrito de compras
-app.post('/store', (req, res) => {
+app.post('/api/store', (req, res) => {
   res.send('Hello World!');
 });
 
