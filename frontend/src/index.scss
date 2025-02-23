@@ -1,0 +1,94 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #313235;
+    line-height: 1.2
+}
+
+h1,h2,h3,h4,h5,h6,small {
+    font-size: inherit;
+    font-weight: inherit
+}
+
+em,strong,b {
+    font-style: normal;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+mark {
+    background: rgba(0,0,0,0)
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0
+}
+
+input::-moz-placeholder {
+    opacity: 1
+}
+
+input::placeholder {
+    opacity: 1
+}
+
+fieldset {
+    border-width: 0
+}
+
+button {
+    background: rgba(0,0,0,0);
+    border-width: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+button:active {
+    color: inherit
+}
+
+button:focus {
+    outline: none
+}
+
+button:required {
+    box-shadow: none
+}
+
+ul,ol {
+    list-style: none
+}
+
+label,svg,video,canvas,audio,iframe,embed,object {
+    display: block
+}
+
+table {
+    border-collapse: collapse
+}
+
+th {
+    text-align: inherit
+}
+
+span {
+    vertical-align: unset
+}
+
+[hidden] {
+    display: none !important
+}

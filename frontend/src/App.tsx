@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './index.scss';
 
 function App() {
   const [equipos, setEquipos] = useState<any[]>([]);
