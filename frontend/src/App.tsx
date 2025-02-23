@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import Equipos from "./components/Equipos";
+import EquiposProps from "./components/Equipos/types";
 
 import "./index.scss";
 
 function App() {
-  const [celulares, setCelulares] = useState<any[]>([]);
+  const [celulares, setCelulares] = useState<EquiposProps[]>([]);
   useEffect(() => {
-    fetch("http://192.168.0.2/api/equipos")
+    fetch("http://192.168.0.2/api/products")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setCelulares(data);
       });
   }, []);
@@ -20,7 +20,7 @@ function App() {
     <>
       <section className="container">
         {celulares.map((item) => {
-          return <Equipos name={item.name} year={item.year} key={item.name} />;
+          return <Equipos equipo={item} key={item.id} />;
         })}
       </section>
     </>

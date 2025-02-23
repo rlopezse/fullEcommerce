@@ -131,5 +131,14 @@ span {
     color: #334155;
     font-size: 0.875rem;
     width: calc(100% / 4 - 10px);
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 768px) {
+  .equipos {
+    &-nombre {
+      width: 100%;
+    }
   }
 }
