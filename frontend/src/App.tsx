@@ -1,27 +1,30 @@
-import { useState, useEffect } from 'react'
-import './index.scss';
+import { useState, useEffect } from "react";
+import Equipos from "./components/Equipos";
+
+import "./index.scss";
 
 function App() {
-  const [equipos, setEquipos] = useState<any[]>([]);
+  const [celulares, setCelulares] = useState<any[]>([]);
   useEffect(() => {
-    fetch('http://192.168.0.2/api/equipos')
+    fetch("http://192.168.0.2/api/equipos")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         console.log(data);
-        setEquipos(data);
+        setCelulares(data);
       });
   }, []);
 
-
   return (
     <>
-      {equipos.map((equipo) => (
-        <p key={equipo.name}>{equipo.name}</p>
-      ))} 
+      <section className="container">
+        {celulares.map((item) => {
+          return <Equipos data={item} key={item.name} />;
+        })}
+      </section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
