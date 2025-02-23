@@ -20,7 +20,7 @@ function App() {
     <>
       <section className="container">
         {celulares.map((item) => {
-          return <Equipos data={item} key={item.name} />;
+          return <Equipos name={item.name} year={item.year} key={item.name} />;
         })}
       </section>
     </>
