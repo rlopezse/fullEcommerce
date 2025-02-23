@@ -2,12 +2,8 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db/index.js');
 
-router.get('/equipos', function (req, res) {
-  if (req.query.year) {
-    var query = `SELECT * FROM phonesData WHERE year='${req.query.year}'`;
-  } else {
-    var query = 'SELECT * FROM phonesData';
-  }
+router.get('/products', function (req, res) {
+  var query = 'SELECT * FROM products';
 
   db.query(query, (err, results) => {
     if (err) {

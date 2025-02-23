@@ -7,16 +7,20 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
-//rutas
-const equipos = require('./routes/equiposRouter.js');
+//routes
+const products = require('./routes/productsRouter.js');
 
 app.use(cors());
 app.use(helmet());
 app.use(compression());
+app.use('/api', products);
 
-app.use('/api', equipos);
-
-//guadar carrito de compras
+//store products
 app.post('/api/store', (req, res) => {
   res.send('Hello World!');
+});
+
+//server init
+app.listen(port, () => {
+  console.log(`Server running and listening on port ${port}`);
 });
