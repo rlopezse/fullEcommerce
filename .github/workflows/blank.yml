@@ -15,17 +15,19 @@ jobs:
           cd /home/ronaldlopez/app/fullEcommerce
           git pull origin main
 
-      - name: Instalar dependencias de Node.js
+      - name: Actualizar Express
         run: |
-          npm ci 
-
-      - name: Reiniciar Express js
-        run: |
-          sudo service express stop
-          sudo service express start
+          cd /home/ronaldlopez/app/fullEcommerce
+          npm ci
 
       - name: Build de la aplicación frontend
         run: |
           cd /home/ronaldlopez/app/fullEcommerce/frontend
+          npm ci
           npm run build
+      
+      - name: Reiniciar servicio Express
+        run: |
+          sudo service express stop
+          sudo service express start
 
