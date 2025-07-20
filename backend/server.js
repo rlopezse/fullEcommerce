@@ -27,5 +27,5 @@ app.get('/api/info', (req, res) => {
 
 //server init
 app.listen(port, () => {
-  console.log(`Server running and listening on port ${port}`);
+  console.log(`Server ejecutándose en el puerto: ${port}`);
 });

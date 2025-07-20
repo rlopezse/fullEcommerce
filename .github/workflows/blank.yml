@@ -24,3 +24,8 @@ jobs:
           sudo service express stop
           sudo service express start
 
+      - name: Build de la aplicación frontend
+        run: |
+          cd /home/ronaldlopez/app/fullEcommerce/frontend
+          npm run build
+
