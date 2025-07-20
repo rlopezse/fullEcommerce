@@ -1,0 +1,32 @@
+# Carpetas de proyecto
+node_modules
+dist
+build
+.vite
+coverage
+public
+
+# Archivos de entorno y lockfiles
+.env
+.env.* 
+*.lock
+
+# Archivos de configuración de Node.js y Vite
+package.json
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+vite.config.ts
+vite.config.js
+tsconfig.json
+tsconfig.*.json
+
+# Otros archivos de configuración
+postcss.config.js
+tailwind.config.js
+tailwind.config.ts
+eslint.config.js
+eslint.config.ts
+
+# Otros
+*.svg
