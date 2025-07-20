@@ -13,9 +13,7 @@ jobs:
       - name: Actualizar código desde Git
         run: |
           cd /home/ronaldlopez/app/fullEcommerce
-          git fetch origin main
-          git reset --hard origin/main
-          git clean -fdx
+          git pull origin main
 
       - name: Instalar dependencias de Node.js
         run: |
