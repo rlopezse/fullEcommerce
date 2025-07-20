@@ -20,6 +20,11 @@ app.post('/api/store', (req, res) => {
   res.send('Hello World!');
 });
 
+//store products
+app.get('/api/info', (req, res) => {
+  res.send('Hello World!');
+});
+
 //server init
 app.listen(port, () => {
   console.log(`Server running and listening on port ${port}`);
