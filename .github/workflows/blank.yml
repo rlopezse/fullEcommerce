@@ -12,17 +12,17 @@ jobs:
     steps:
       - name: Actualizar código desde Git
         run: |
-          cd /var/www/html/fullEcommerce
+          cd /var/www/fullEcommerce
           git pull origin main
 
       - name: Actualizar Express
         run: |
-          cd /var/www/html/fullEcommerce/backend
+          cd /var/www/fullEcommerce/backend
           npm ci
 
       - name: Build de la aplicación frontend
         run: |
-          cd /var/www/html/fullEcommerce/frontend
+          cd /var/www/fullEcommerce/frontend
           npm ci
           npm run build
       
