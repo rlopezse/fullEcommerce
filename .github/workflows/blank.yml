@@ -19,7 +19,8 @@ jobs:
         run: |
           npm ci 
 
-      - name: Reiniciar servicio systemd
+      - name: Reiniciar Express js
         run: |
-          sudo service express restart
+          sudo service express stop
+          sudo service express start
 
