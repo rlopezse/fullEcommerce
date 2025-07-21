@@ -1,4 +1,4 @@
-name: CI fullEcommerce
+name: Ecommerce
 
 on:
   push:
@@ -12,17 +12,17 @@ jobs:
     steps:
       - name: Actualizar código desde Git
         run: |
-          cd /var/www/fullEcommerce
+          cd ${{ vars.BASE_PATH }} 
           git pull origin main
 
       - name: Actualizar Express
         run: |
-          cd /var/www/fullEcommerce/backend
+          cd ${{ vars.BACKEND_PATH }} 
           npm ci
 
       - name: Build de la aplicación frontend
         run: |
-          cd /var/www/fullEcommerce/frontend
+          cd ${{ vars.FRONTEND_PATH }} 
           npm ci
           npm run build
       
