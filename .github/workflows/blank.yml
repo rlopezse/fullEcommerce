@@ -28,6 +28,5 @@ jobs:
       
       - name: Reiniciar servicio Express
         run: |
-          sudo service express stop
-          sudo service express start
+          sudo systemctl restart express
 
