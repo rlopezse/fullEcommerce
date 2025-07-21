@@ -25,8 +25,10 @@ jobs:
           cd ${{ vars.FRONTEND_PATH }} 
           npm ci
           npm run build
-      
+
+      - name: Verificar usuario actual
+        run: whoami
+
       - name: Reiniciar servicio Express
         run: |
           sudo systemctl restart express
-
