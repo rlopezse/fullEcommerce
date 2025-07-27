@@ -14,6 +14,20 @@ Redis (DB caché)
 React (Typescript)
 Tailwind
 
-# DATA
+# ANALYTICS
 Google Analytics
-Locker
+
+# CI/CD
+GitHub Actions (Selfhosted runner)
+
+# UI
+Figma
+
+# DOCS
+Postman
+
+# TESTING
+Cypress
+
+# MONITORIZACIÓN
+DataDog
