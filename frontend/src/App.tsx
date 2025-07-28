@@ -8,12 +8,13 @@ function App() {
   ReactGA.send({ hitType: "pageview", page: "/home", title: "Homepage" });
   const [products, setProducts] = useState<ProductsProps[]>([]);
   useEffect(() => {
-    fetch("http://192.168.0.2/api/products")
+    //fetch("http://localhost:3000/api/products/")
+    fetch("http://192.168.0.2/api/products/")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setProducts(data);
+        setProducts(data.data);
       });
   }, []);
 
