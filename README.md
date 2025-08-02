@@ -4,6 +4,7 @@
 RaspBerri PI (8GB)
 linux Server (Ubuntu)
 
+
 # BACKEND
 Nginx
 Apigateway (Express)
